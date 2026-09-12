@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f6f3">
+  <title>今天吃什么 · 华科东区</title>
+  <link rel="stylesheet" href="css/style.css?v=20260912-result-modal-1">
+  <script src="js/data.js?v=20260912-result-modal-1" defer></script>
+  <script src="js/app.js?v=20260912-fast-forward-1" defer></script>
+</head>
+<body class="is-home">
+  <main class="app">
+    <section id="home" class="page" aria-labelledby="home-title">
+      <div class="home-scene">
+        <div class="home-decorations" aria-hidden="true">
+          <div class="collage-plate"><img src="../assets/plate.webp" alt=""></div>
+          <div class="collage-eat"><img src="../assets/eat-stamp.webp" alt=""></div>
+          <img class="collage-red-stamp" src="../assets/red-stamp.webp" alt="">
+          <div class="collage-red-postmark"></div><div class="collage-green-postmark"></div>
+          <div class="collage-soup"><img src="../assets/soup-stamp.webp" alt=""></div>
+          <div class="collage-mushroom"><img src="../assets/mushroom-stamp.webp" alt=""></div>
+          <img class="bottom-noodles" src="../assets/底部装饰1.png" alt="" width="150" height="141">
+          <img class="bottom-rice" src="../assets/底部装饰2.png" alt="" width="147" height="130">
+        </div>
+        <h1 id="home-title" class="home-title" tabindex="-1"><img src="../assets/标题.png" alt="今天吃什么" width="396" height="171"></h1>
+        <div class="machine" role="img" aria-label="华科东区随机扭蛋机">
+          <img id="machine-idle" src="../assets/machine/idle.webp" alt="" width="580" height="1061" fetchpriority="high">
+          <canvas id="machine-animation" width="580" height="1061" hidden aria-hidden="true"></canvas>
+        </div>
+        <p id="pool-summary" class="sr-only"></p>
+        <button id="draw" class="draw-button" aria-label="开始抽取" aria-describedby="pool-summary"><img src="../assets/开始抽取按钮.png" alt="" width="236" height="76"></button>
+        <p id="home-draw-status" class="sr-only" role="status" hidden></p>
+      </div>
+    </section>
+
+  </main>
+  <div id="opening-overlay" class="opening-overlay" role="dialog" aria-modal="true" aria-label="扭蛋打开" tabindex="-1" hidden>
+    <div class="opening-capsule">
+      <img id="opening-idle" src="../assets/opening/idle.webp" alt="" width="420" height="626">
+      <canvas id="opening-animation" width="420" height="626" hidden aria-hidden="true"></canvas>
+    </div>
+    <button id="reveal-result" class="reveal-result" type="button" hidden><span>点击屏幕任意位置查看结果</span></button>
+    <section id="result" class="result-panel" hidden aria-labelledby="result-name">
+      <div class="result-stage">
+        <img class="result-paper" src="../assets/弹窗背景.png" alt="" width="390" height="510">
+        <div class="result-illustration"><img id="result-image" src="../assets/food-placeholder.svg" alt="暂无食物插画" width="132" height="126"></div>
+        <div class="result-copy">
+          <h2 id="result-name" tabindex="-1"></h2>
+          <p class="result-location"><img src="../assets/result-location.svg" alt="" width="16" height="16"><span id="result-place"></span></p>
+        </div>
+        <div class="result-actions">
+          <button id="redraw" type="button" aria-label="重新抽取"><img src="../assets/重新抽取.png" alt="" width="423" height="158"></button>
+          <button id="choose" type="button" aria-label="确定"><img src="../assets/确定按钮.png" alt="" width="423" height="158"></button>
+        </div>
+        <button id="close-result" type="button" aria-label="关闭结果，返回首页"><img src="../assets/result-close.svg" alt="" width="24" height="24"></button>
+      </div>
+    </section>
+  </div>
+  <p id="toast" class="toast" role="status" hidden></p>
+</body>
+</html>
