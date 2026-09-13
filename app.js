@@ -8,7 +8,7 @@
   const locationText = food => food.type === 'store'
     ? ['独立店铺', food.location].filter(Boolean).join(' · ')
     : [food.placeName, food.floor].filter(Boolean).join(' · ');
-  const defaultFoodImage = '../assets/food-placeholder.svg';
+  const defaultFoodImage = './assets/other/food-placeholder.svg';
   function showFoodImage(food) {
     const files = window.foodImageFiles;
     const file = files[food.name] || files[window.foodImageMap[food.name]];
@@ -19,7 +19,7 @@
       image.alt = '暂无食物插画';
       image.src = defaultFoodImage;
     };
-    image.src = file ? `../食物插图/${encodeURIComponent(file)}` : defaultFoodImage;
+    image.src = file ? `./assets/food/${encodeURIComponent(file)}` : defaultFoodImage;
   }
   let toastTimer;
   function toast(message) {
@@ -145,8 +145,8 @@
     }
     return { play, reset, prepare, fastForward: () => { playbackRate = 4; } };
   }
-  const machinePlayer = createFramePlayer('#machine-animation', '#machine-idle', '../assets/machine', 'data/machine-manifest.json');
-  const openingPlayer = createFramePlayer('#opening-animation', '#opening-idle', '../assets/opening', 'data/opening-manifest.json');
+  const machinePlayer = createFramePlayer('#machine-animation', '#machine-idle', './assets/machine', './machine-manifest.json');
+  const openingPlayer = createFramePlayer('#opening-animation', '#opening-idle', './assets/opening', './opening-manifest.json');
   $('#opening-overlay').addEventListener('click', () => {
     // 仅打开阶段响应：点击加速剩余动画，末帧之后的点击仍用于查看结果。
     if (!drawing || $('#opening-overlay').hidden || !$('#reveal-result').hidden || !$('#result').hidden) return;

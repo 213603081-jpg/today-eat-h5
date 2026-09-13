@@ -22,7 +22,7 @@ p { line-height: 1.6; }.eyebrow { font-size: 11px; letter-spacing: 2px; color: #
 /* 首页拼贴：按 Figma 402 × 874 的相对位置适配 390 × 844。
    场景保持纵横比；短屏允许纵向滚动，不压扁素材或缩小触控区域。 */
 body.is-home { background: #eee9df; }
-.is-home .app { padding: 0; background: #f3efe7 url("../../assets/背景.png") center / cover; }
+.is-home .app { padding: 0; background: #f3efe7 url("./assets/ui/背景.png") center / cover; }
 
 #home { padding: 0; min-height: 100svh; }
 .home-scene { position: relative; width: 100%; aspect-ratio: 390 / 844; isolation: isolate; overflow: hidden; }
@@ -52,9 +52,9 @@ body.is-home { background: #eee9df; }
 
 .collage-red-stamp { left: 3.19%; top: 44.43%; width: 16.39%; height: 7.71%; }
 .collage-red-postmark { left: -15.05%; top: 47.65%; width: 37.87%; height: 9.63%; background: #af4c33;
-  mask: url("../../assets/figma-red-postmark.png") -2.703cqw -5.251cqw / 43.41cqw 33.44cqw no-repeat; }
+  mask: url("./assets/ui/figma-red-postmark.png") -2.703cqw -5.251cqw / 43.41cqw 33.44cqw no-repeat; }
 .collage-green-postmark { left: 71.83%; top: 49.05%; width: 30.30%; height: 10.84%; background: #586c3ab8;
-  mask: url("../../assets/figma-green-postmark.png") -2.259cqw 0 / 32.56cqw 23.57cqw no-repeat; }
+  mask: url("./assets/ui/figma-green-postmark.png") -2.259cqw 0 / 32.56cqw 23.57cqw no-repeat; }
 .home-scene { container-type: inline-size; }
 .collage-soup { left: 81.73%; top: 55.46%; width: 15.98%; height: 8.21%; overflow: hidden; transform: rotate(19.47deg); }
 
